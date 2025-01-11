@@ -1,9 +1,10 @@
 package main
 
 import "fmt"
+import "unicode/utf8"
 
 func main() {
-	multicarac("A", 100)
+	carac_counter("asSASA ddd dsjkdsjs dk")
 }
 
 
@@ -65,7 +66,23 @@ func multicarac(c string, l int) {
 }
 
 
-
+func carac_counter(chars string) {
+	m := make(map[byte]int)
+	sum := 0
+	for i:= range len(chars) {
+		if _, exist := m[chars[i]]; exist {
+			m[chars[i]] += 1
+		} else {
+			m[chars[i]] = 1
+		}
+		if (m[chars[i]] != ' ') {
+			sum++
+		}
+	}
+	fmt.Println("distribution : ", m)
+	fmt.Println("total caracters : ", sum)
+	fmt.Println("total bytes : ", utf8.RuneCountInString(chars))
+}
 
 
 
