@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	v := []float64{1.1, 5.2, 12.5, 9.2, 10.02}
-	average(v)
+	fmt.Println(fibonacci(13))
 }
 
 // FOR LOOPS
@@ -99,4 +98,19 @@ func average(values []float64) {
 	}
 	av := sum / float64(len(values))
 	fmt.Println(av)
+}
+
+// Var args function
+func varargs(numbers ...int) {
+	for _, v := range numbers {
+		fmt.Println(v)
+	}
+}
+
+// fibonacci function
+func fibonacci(n int) int {
+	if n == 0 || n == 1 {
+		return 1
+	}
+	return fibonacci(n-1) + fibonacci(n-2)
 }
