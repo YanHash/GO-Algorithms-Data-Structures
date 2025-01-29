@@ -151,3 +151,15 @@ func mymin(t []int) int {
 	}
 	return current
 }
+
+// callback
+func plusTwo() func(int) int {
+	return func(i int) int {
+		return i + 2
+	}
+}
+
+/*
+p := plusTwo()
+fmt.Println(p(2))
+*/
