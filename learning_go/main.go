@@ -130,3 +130,24 @@ func multi(i int) int {
 //input := []int{0, 1, 2, 3, 4, 5}
 //v := mapfunc(multi, input)
 //fmt.Println(v)
+
+// min & max
+func mymax(t []int) int {
+	current := t[0]
+	for i, _ := range t {
+		if t[i] >= current {
+			current = t[i]
+		}
+	}
+	return current
+}
+
+func mymin(t []int) int {
+	current := t[0]
+	for i, _ := range t {
+		if t[i] <= current {
+			current = t[i]
+		}
+	}
+	return current
+}
