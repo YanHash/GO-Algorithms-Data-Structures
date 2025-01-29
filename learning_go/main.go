@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(fibonacci(13))
+
 }
 
 // FOR LOOPS
@@ -114,3 +114,19 @@ func fibonacci(n int) int {
 	}
 	return fibonacci(n-1) + fibonacci(n-2)
 }
+
+// map func
+func mapfunc(f func(int) int, args []int) []int {
+	for i, v := range args {
+		args[i] = f(v)
+	}
+	return args
+}
+
+func multi(i int) int {
+	return i * 2
+}
+
+//input := []int{0, 1, 2, 3, 4, 5}
+//v := mapfunc(multi, input)
+//fmt.Println(v)
