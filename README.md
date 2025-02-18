@@ -11,3 +11,4 @@ A learning purpose project in Go. The goal is to gain hands-on experience with t
 - `stack.go` : An implementation for the stack data structure with its common interaction methods : push & pop.
 - `linked_list.go` : An implementation for the linked list data structure with its common interaction methods : getNext, addToHead, addToTail, getData (current).
 - `queue.go` : An implementation for the queue data structure with its common interaction methods : enqueue, dequeue, peek.
+- `hash_table.go` : An implementation for the hash table data structure with its common interaction methods : put, get, delete.
